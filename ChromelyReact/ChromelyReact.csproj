@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
+<!--    <OutputType>WinExe</OutputType>-->
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PublishSingleFile>true</PublishSingleFile>
-    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+<!--    <RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
     <!-- <RuntimeIdentifier>linux-x64</RuntimeIdentifier>-->
-    <!-- <RuntimeIdentifier>osx-x64</RuntimeIdentifier>-->
+     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
     <Platforms>x64</Platforms>
     <!-- <ApplicationIcon>chromely.ico</ApplicationIcon>-->
     <AssemblyName>chromely_react</AssemblyName>
@@ -79,7 +79,8 @@
     </Exec>
 
     <Message Importance="High" Text="Copying React App to debug folder.." />
-    <Exec Command="xcopy &quot;$(ProjectDir)reactapp\dist&quot; &quot;$(TargetDir)dist&quot;   /i /s /r /y /c" />
+<!--    <Exec Command="xcopy &quot;$(ProjectDir)reactapp\dist&quot; &quot;$(TargetDir)dist&quot;   /i /s /r /y /c" />-->
+    <Exec Command="rsync -r --ignore-errors &quot;$(ProjectDir)reactapp\dist&quot; &quot;$(TargetDir)dist&quot;" />
   </Target>
 
   <Target Name="ReleaseChromelyApp" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
