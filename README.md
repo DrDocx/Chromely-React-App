@@ -1,5 +1,3 @@
-![](https://github.com/chromelyapps/Chromely/blob/master/Screenshots/chromely_angular.png)
+# Chromely React App
 
-![](https://github.com/chromelyapps/Chromely/blob/master/Screenshots/chromely_react.png)
-
-![](https://github.com/chromelyapps/Chromely/blob/master/Screenshots/chromely_vue.png)
+This app is a proof of concept demo to show that an ASP.NET Core controller can communicate with a React.JS frontend through REST API calls and be packaged into one local application
